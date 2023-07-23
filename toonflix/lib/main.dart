@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:toonflix/widgets/Button.dart';
+import 'package:toonflix/widgets/currency_card.dart';
 
 class Player {
   String? name; // ? => null 값을 가질 수 있음을 의미
@@ -27,80 +28,133 @@ class App extends StatelessWidget {
       // Scaffold => 화면 구성과 구조에 관한 걸 다룰수 있는 위젯
       home: Scaffold(
         backgroundColor: const Color(0xFF181818),
-        body: Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 20,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  height: 80,
-                ),
-                // Row => 수평 , Column => 수직
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        const Text(
-                          'Hey Selena',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text('Welcome back',
+        body: SingleChildScrollView(
+          child: Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 80,
+                  ),
+                  // Row => 수평 , Column => 수직
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          const Text(
+                            'Hey Selena',
                             style: TextStyle(
-                              color: Colors.white.withOpacity(0.8),
-                              fontSize: 18,
-                            )),
-                      ],
-                    )
-                  ],
-                ),
-                const SizedBox(
-                  height: 120,
-                ),
-                Text(
-                  'Total Balance',
-                  style: TextStyle(
-                    fontSize: 22,
-                    color: Colors.white.withOpacity(0.8),
+                              color: Colors.white,
+                              fontSize: 28,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text('Welcome back',
+                              style: TextStyle(
+                                color: Colors.white.withOpacity(0.8),
+                                fontSize: 18,
+                              )),
+                        ],
+                      )
+                    ],
                   ),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                const Text(
-                  '\$5 194 482',
-                  style: TextStyle(
-                    fontSize: 48,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
+                  const SizedBox(
+                    height: 70,
                   ),
-                ),
-                const SizedBox(
-                  height: 30,
-                ),
+                  Text(
+                    'Total Balance',
+                    style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.white.withOpacity(0.8),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Text(
+                    '\$5 194 482',
+                    style: TextStyle(
+                      fontSize: 48,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 30,
+                  ),
 
-                const Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Button(
-                        text: 'Transfer',
-                        bgColor: Color(0xFFF1B33B),
-                        textColor: Colors.black),
-                    Button(
-                        text: 'Request',
-                        bgColor: Color(0xFF1F2123),
-                        textColor: Colors.white)
-                  ],
-                )
-              ],
-            )),
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Button(
+                          text: 'Transfer',
+                          bgColor: Color(0xFFF1B33B),
+                          textColor: Colors.black),
+                      Button(
+                          text: 'Request',
+                          bgColor: Color(0xFF1F2123),
+                          textColor: Colors.white)
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 100,
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Wallets',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 36,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Text(
+                        'Veiw All',
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.8),
+                          fontSize: 18,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const CurCard(
+                    name: 'Euro',
+                    code: 'EUR',
+                    amount: '6 428',
+                    icon: Icons.euro_rounded,
+                    isInverted: false,
+                    order: 0,
+                  ),
+                  const CurCard(
+                    name: 'Bitcoin',
+                    code: 'BTC',
+                    amount: '9 785',
+                    icon: Icons.currency_bitcoin_rounded,
+                    isInverted: true,
+                    order: 20,
+                  ),
+                  const CurCard(
+                    name: 'Dollar',
+                    code: 'USD',
+                    amount: '2 158',
+                    icon: Icons.attach_money_rounded,
+                    isInverted: false,
+                    order: 40,
+                  ),
+                ],
+              )),
+        ),
       ),
     );
   }

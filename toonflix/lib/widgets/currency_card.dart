@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// currencyCard
+
 class CurCard extends StatelessWidget {
   final String name, code, amount;
   final IconData icon;

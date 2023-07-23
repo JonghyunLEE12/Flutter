@@ -1,1 +1,1 @@
-<img src="IMG/Simulator Screenshot - iPhone 14 Pro Max - 2023-07-23 at 21.31.12.png"  width="700" height="370">
+<img src="IMG/Simulator Screenshot - iPhone 14 Pro Max - 2023-07-23 at 21.31.12.png"  width="300" height="500">

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// currencyCard
+// 내 커밋 돌려줘요
 
 class CurCard extends StatelessWidget {
   final String name, code, amount;

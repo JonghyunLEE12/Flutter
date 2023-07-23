@@ -1,1 +1,1 @@
-![Simulator Screenshot - iPhone 14 Pro Max - 2023-07-23 at 21.31.12](/Users/ijonghyeon/Desktop/dart&Flutter/Flutter/pomodoro/IMG/Simulator Screenshot - iPhone 14 Pro Max - 2023-07-23 at 21.31.12.png)
+<img src="/Users/ijonghyeon/Desktop/dart&Flutter/Flutter/pomodoro/IMG/Simulator Screenshot - iPhone 14 Pro Max - 2023-07-23 at 21.31.12.png"  width="700" height="370">
